@@ -98,7 +98,7 @@
       }
       
     ],
-    "addressPrefixSubnet" :"10.0.1.0/28",
+    "addressPrefixSubnet" :"10.0.1.0,
     "addressPrefixRoutes":"10.2.0.hbhj/
   }
   
