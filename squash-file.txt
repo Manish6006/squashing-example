@@ -1,0 +1,105 @@
+{
+    "subnetName":"zks-vnet-subnet-dev-uksouth-03",
+    "subnetDelegations":"myDelegations",
+    "vnetName": "zks-vnet-dev-uksouth-02",
+    "routeTableName":"zks-rts-dev-uk-001",
+    "routeName": "zks-routes-dev-uk-001",
+    "tags": {
+      "Environment": "Development",
+      "Project": "myProject",
+      "Team": "Knight Riders"
+    },
+    "tagsRoutes": {
+        "Environment": "Development",
+        "Project": "myProject",
+        "Team": "Knight Riders"
+      },
+    "inboundRules": [
+      {
+        "name": "Allow_HTTP",
+        "properties": {
+          "priority": 100,
+          "direction": "Inbound",
+          "access": "Allow",
+          "Protocol": "Tcp",
+          "sourceAddressPrefix": "*",
+          "sourcePortRange": "*",
+          "destinationAddressPrefix": "*",
+          "destinationPortRange": "80"
+        }
+      },
+      {
+        "name": "Allow_HTTPS",
+        "properties": {
+          "priority": 110,
+          "direction": "Inbound",
+          "access": "Allow",
+          "Protocol": "Tcp",
+          "sourceAddressPrefix": "*",
+          "sourcePortRange": "*",
+          "destinationAddressPrefix": "*",
+          "destinationPortRange": "443"
+        }
+      },
+      {
+        "name": "Deny_All",
+        "properties": {
+          "priority": 200,
+          "direction": "Inbound",
+          "access": "Deny",
+          "Protocol": "*",
+          "sourceAddressPrefix": "*",
+          "sourcePortRange": "*",
+          "destinationAddressPrefix": "*",
+          "destinationPortRange": "*"
+        }
+      }
+      
+    ],
+    "outboundRules": [
+      {
+        "name": "AllowHTTPOut",
+        "properties": {
+          "priority": 100,
+          "direction": "Outbound",
+          "access": "Allow",
+          "Protocol": "Tcp",
+          "sourceAddressPrefix": "*",
+          "sourcePortRange": "*",
+          "destinationAddressPrefix": "*",
+          "destinationPortRange": "80"
+        }
+      },
+      {
+        "name": "AllowHTTPOut",
+        "properties": {
+          "priority": 100,
+          "direction": "Outbound",
+          "access": "Allow",
+          "Protocol": "Tcp",
+          "sourceAddressPrefix": "*",
+          "sourcePortRange": "*",
+          "destinationAddressPrefix": "*",
+          "destinationPortRange": "80"
+        }
+      },
+      {
+        "name": "AllowHTTPSOut",
+        "properties": {
+          "priority": 200,
+          "direction": "Outbound",
+          "access": "Deny",
+          "Protocol": "443Tcp",
+          "sourceAddressPrefix": "*",
+          "sourcePortRange": "*",
+          "destinationAddressPrefix": "*",
+          "destinationPortRange": "443"
+        }
+      }
+      
+    ],
+    "addressPrefixSubnet" :"10.0.1.0,
+    "addressPrefixRoutes":"10.2.0.hbhj/
+  }
+  
+  
